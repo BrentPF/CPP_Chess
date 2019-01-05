@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1546472403 source:c:\users\brent\documents\codeblocks\chess\main.cpp
+	<iostream>
+	"board.h"
+	"pieces.h"
+
+1546472393 c:\users\brent\documents\codeblocks\chess\include\board.h
+	"pieces.h"
+
+1546474233 source:c:\users\brent\documents\codeblocks\chess\src\board.cpp
+	"board.h"
+	"pieces.h"
+	<string.h>
+	<iostream>
+
+1546471425 c:\users\brent\documents\codeblocks\chess\include\pieces.h
+	"board.h"
+
+1546474180 source:c:\users\brent\documents\codeblocks\chess\src\pieces.cpp
+	"pieces.h"
+	"board.h"
+
