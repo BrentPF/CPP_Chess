@@ -50,9 +50,12 @@ int board::place(){
 }
 
 int board::pickup(){
-    char testC[3] = "BP";
-    picked[0] = 1;
-    picked[1] = 3;
+    char testC[3];
+    cin >> testC;
+    picked[0] = '8' - testC[0];
+    picked[1] = testC[1] - 'A';
+    cout << picked[0] << endl;
+    cout<<picked[1]<<endl;
 }
 
 int board::printState(){

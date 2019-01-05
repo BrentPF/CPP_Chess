@@ -60,7 +60,7 @@ int pieces::pawn(){
     if (picked[0]=='B'){
         return 1;
     } else {
-
+        return 1;
     }
     return 0;
 }

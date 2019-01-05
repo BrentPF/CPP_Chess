@@ -20,3 +20,24 @@
 	"pieces.h"
 	"board.h"
 
+1546472403 source:c:\users\brent\documents\github\cpp_chess\chess\main.cpp
+	<iostream>
+	"board.h"
+	"pieces.h"
+
+1546472393 c:\users\brent\documents\github\cpp_chess\chess\include\board.h
+	"pieces.h"
+
+1546471425 c:\users\brent\documents\github\cpp_chess\chess\include\pieces.h
+	"board.h"
+
+1546731270 source:c:\users\brent\documents\github\cpp_chess\chess\src\board.cpp
+	"board.h"
+	"pieces.h"
+	<string.h>
+	<iostream>
+
+1546474180 source:c:\users\brent\documents\github\cpp_chess\chess\src\pieces.cpp
+	"pieces.h"
+	"board.h"
+
