@@ -3,16 +3,13 @@
 #include <string.h>
 #include <iostream>
 using namespace std;
-//TODO: PLACE AND PICKUP METHODS; PIECES CLASS TO FIND ALL LEGAL MOVES ON PICKUP -> CONFIRM PLACEMENT ON PLACE
 static char state[8][8][3];
-static int picked[2]={0}; //co-ordinates of picked up piece
+static int picked[2]={0};
 static pieces piece(&state);
 board::board()
 {
     setDefaultState();
     printState();
-    pickup();
-    place();
 }
 
 board::~board()
@@ -35,12 +32,14 @@ int board::setDefaultState(){
     return 1;
 }
 
-int board::place(){
-    int toPlace[2] = {2,0};
-    if (legal(2,0)){
-        char rem[3] = {*state[2][0]};
+int board::place(char (*input)[3]){
+    int toPlace[2] = {0};
+    toPlace[0] = '8' - (*input)[0];
+    toPlace[1] = ((*input)[1]>'A')?(*input)[1] - 'A' - 32: (*input)[1] - 'A';
+    if (legal(toPlace[0],toPlace[1])){
+        char rem[3] = {*state[1][0]};
         for (int i = 0; i<3;i++){
-        state[2][0][i] = state[picked[0]][picked[1]][i];
+        state[toPlace[0]][toPlace[1]][i] = state[picked[0]][picked[1]][i];
         state[picked[0]][picked[1]][i] = 0;
         }
         picked[0] = 0;
@@ -49,13 +48,9 @@ int board::place(){
     }
 }
 
-int board::pickup(){
-    char testC[3];
-    cin >> testC;
-    picked[0] = '8' - testC[0];
-    picked[1] = testC[1] - 'A';
-    cout << picked[0] << endl;
-    cout<<picked[1]<<endl;
+int board::pickup(char (*input)[3]){
+    picked[0] = '8' - (*input)[0];
+    picked[1] = ((*input)[1]>'A')?(*input)[1] - 'A' - 32: (*input)[1] - 'A';
 }
 
 int board::printState(){

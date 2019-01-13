@@ -10,8 +10,8 @@ class board
         int setDefaultState();
         int printState();
         int legal(int placeRow, int placeCol);
-        int place();
-        int pickup();
+        int place(char (*input)[3]);
+        int pickup(char (*input)[3]);
     protected:
 
     private:

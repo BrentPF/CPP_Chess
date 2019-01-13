@@ -33,23 +33,24 @@ int pieces::checkMove(int (*pos)[2], int placeRow, int placeCol){
     position=pos;
 
     switch(picked[1]){
+
     case 'P':
         return pawn();
         break;
     case 'R':
-        return pawn();
+        return rook();
         break;
     case 'B':
-        return pawn();
+        return bishop();
         break;
     case 'H':
-        return pawn();
+        return horse();
         break;
     case 'K':
-        return pawn();
+        return king();
         break;
     case 'Q':
-        return pawn();
+        return queen();
         break;
     }
 
@@ -67,40 +68,45 @@ int pieces::pawn(){
 
 int pieces::rook(){
     if (picked[0]=='B'){
-
+        return 1;
     } else {
-
+        return 1;
     }
+    return 0;
 }
 
 int pieces::bishop(){
     if (picked[0]=='B'){
-
+        return 1;
     } else {
-
+        return 1;
     }
+    return 0;
 }
 
 int pieces::horse(){
     if (picked[0]=='B'){
-
+        return 1;
     } else {
-
+        return 1;
     }
+    return 0;
 }
 
 int pieces::king(){
     if (picked[0]=='B'){
-
+        return 1;
     } else {
-
+        return 1;
     }
+    return 0;
 }
 
 int pieces::queen(){
     if (picked[0]=='B'){
-
+        return 1;
     } else {
-
+        return 1;
     }
+    return 0;
 }
